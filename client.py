@@ -44,7 +44,6 @@ while True:
             num1 = int(data[0])
             num2 = int(data[1])
             operacao = int(data[2])
-            print(num1, num2, operacao)
             if operacao == 0:
                 resp = input('Quanto é: \t' + str(num1) + ' + ' + str(num2) + ': ')
                 if int(resp) == num1 + num2:
