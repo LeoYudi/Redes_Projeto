@@ -48,20 +48,26 @@ while True:
                 resp = input('Quanto é: \t' + str(num1) + ' + ' + str(num2) + ': ')
                 if int(resp) == num1 + num2:
                     cliente.pontuacao += 1
+                    print('Você acertou!')
                 else:
                     cliente.vidas -= 1
+                    print('Você errou!')
             elif operacao == 1:
                 resp = input('Quanto é: \t' + str(num1) + ' - ' + str(num2) + ': ')
                 if int(resp) == num1 - num2:
                     cliente.pontuacao += 1
+                    print('Você acertou!')
                 else:
                     cliente.vidas -= 1
+                    print('Você errou!')
             else:
                 resp = input('Quanto é: \t' + str(num1) + ' x ' + str(num2) + ': ')
                 if int(resp) == num1 * num2:
                     cliente.pontuacao += 1
+                    print('Você acertou!')
                 else:
                     cliente.vidas -= 1
+                    print('Você errou!')
 
             if cliente.vidas == 0:
                 cliente.enviar('LOST')
@@ -74,6 +80,7 @@ while True:
                 break
 
             while True:
+                print('Aguardando comando NEXT para a próxima conta')
                 next = input('Comando (NEXT ou VLIFES ou VPOINTS): ')
                 if next == 'NEXT':
                     cliente.enviar(next)
